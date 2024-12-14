@@ -1,6 +1,6 @@
-module api-fiber-gorm
+module auth-jwt
 
-go 1.20
+go 1.23
 
 require (
 	github.com/gofiber/contrib/jwt v1.0.10
