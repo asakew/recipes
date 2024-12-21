@@ -1,4 +1,4 @@
-module main
+module dummyjson
 
 go 1.20
 

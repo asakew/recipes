@@ -35,7 +35,7 @@ This is a sample program demonstrating how to use GORM as an ORM to connect to a
     go run main.go
     ```
 
-2. The server will start on `http://localhost:3000`.
+2. The server will start on `http://localhost:3001`.
 
 ## Endpoints
 
@@ -50,20 +50,20 @@ This is a sample program demonstrating how to use GORM as an ORM to connect to a
 
 ### Get All Books
 ```sh
-curl -X GET http://localhost:3000/api/v1/book
+curl -X GET http://localhost:3001/api/v1/book
 ```
 
 ### Get Book by ID
 ```sh
-curl -X GET http://localhost:3000/api/v1/book/1
+curl -X GET http://localhost:3001/api/v1/book/1
 ```
 
 ### Create a New Book
 ```sh
-curl -X POST http://localhost:3000/api/v1/book -d '{"title": "New Book", "author": "Author Name"}' -H "Content-Type: application/json"
+curl -X POST http://localhost:3001/api/v1/book -d '{"title": "2022 New Book", "author": "Author Name"}' -H "Content-Type: application/json"
 ```
 
 ### Delete a Book
 ```sh
-curl -X DELETE http://localhost:3000/api/v1/book/1
+curl -X DELETE http://localhost:3001/api/v1/book/1
 ```
