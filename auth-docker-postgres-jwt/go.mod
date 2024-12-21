@@ -1,4 +1,4 @@
-module app
+module auth-docker-postgres-jwt
 
 go 1.20
 

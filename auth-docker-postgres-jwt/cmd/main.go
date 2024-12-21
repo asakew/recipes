@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"app/database"
-	"app/router"
+	"auth-docker-postgres-jwt/database"
+	"auth-docker-postgres-jwt/router"
 
 	"github.com/gofiber/fiber/v2"
 	// "github.com/gofiber/fiber/v2/middleware/cors"
