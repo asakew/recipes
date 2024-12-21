@@ -1,3 +1,5 @@
+<!-- See https://github.com/gorilla/websocket/blob/master/examples/chat/home.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,7 @@
   <script type="text/javascript">
     window.onload = function () {
       let conn;
+      const nameInput = document.getElementById("username");
       const msg = document.getElementById("msg");
       const log = document.getElementById("log");
 
@@ -23,10 +26,12 @@
         if (!conn) {
           return false;
         }
-        if (!msg.value.trim()) { // prevent sending empty messages
+        if (!nameInput.value.trim() || !msg.value.trim()) { // prevent sending empty name or messages
+          alert('Enter both your name and a message.');
           return false;
         }
-        conn.send(msg.value);
+        const message = `${nameInput.value.trim()}: ${msg.value.trim()}`;
+        conn.send(message);
         msg.value = "";
         return false;
       };
@@ -91,12 +96,12 @@
     #msg {
       width: calc(100% - 5em);
     }
-
   </style>
 </head>
 <body>
 <div id="log" role="log" aria-live="polite" class="border rounded p-2 mb-2"></div>
 <form id="form" role="form" aria-label="Chat Form" class="form-inline">
+  <input type="text" id="username" placeholder="Your name" class="form-control mr-2" aria-label="Name input" required />
   <input type="text" id="msg" placeholder="Type your message..." autofocus autocomplete="off" aria-label="Message input" class="form-control mr-2" />
   <input type="submit" value="Send" aria-label="Send button" class="btn btn-primary" />
 </form>
