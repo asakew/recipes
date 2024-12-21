@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"app/config"
+	"auth-docker-postgres-jwt/config"
 
 	jwtware "github.com/gofiber/contrib/jwt"
 	"github.com/gofiber/fiber/v2"

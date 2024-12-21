@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"app/database"
-	"app/model"
+	"auth-docker-postgres-jwt/database"
+	"auth-docker-postgres-jwt/model"
 
 	"github.com/gofiber/fiber/v2"
 )

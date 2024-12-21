@@ -1,8 +1,8 @@
 package router
 
 import (
-	"app/handler"
-	"app/middleware"
+	"auth-docker-postgres-jwt/handler"
+	"auth-docker-postgres-jwt/middleware"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"

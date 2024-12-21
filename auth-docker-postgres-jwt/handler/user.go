@@ -3,8 +3,8 @@ package handler
 import (
 	"strconv"
 
-	"app/database"
-	"app/model"
+	"auth-docker-postgres-jwt/database"
+	"auth-docker-postgres-jwt/model"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"

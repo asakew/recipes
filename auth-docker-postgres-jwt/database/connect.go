@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"app/config"
-	"app/model"
+	"auth-docker-postgres-jwt/config"
+	"auth-docker-postgres-jwt/model"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -21,7 +21,7 @@ func ConnectDB() {
 	}
 
 	dsn := fmt.Sprintf(
-		"host=db port=%d user=%s password=%s dbname=%s sslmode=disable",
+		"host=37.77.104.186 port=%d user=%s password=%s dbname=%s sslmode=disable",
 		port,
 		config.Config("DB_USER"),
 		config.Config("DB_PASSWORD"),

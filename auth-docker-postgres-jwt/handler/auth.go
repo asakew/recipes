@@ -6,9 +6,9 @@ import (
 	"net/mail"
 	"time"
 
-	"app/config"
-	"app/database"
-	"app/model"
+	"auth-docker-postgres-jwt/config"
+	"auth-docker-postgres-jwt/database"
+	"auth-docker-postgres-jwt/model"
 
 	"gorm.io/gorm"
 
