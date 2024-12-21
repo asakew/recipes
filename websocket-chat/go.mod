@@ -1,4 +1,4 @@
-module main
+module websocket-chat
 
 go 1.18
 

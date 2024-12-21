@@ -43,8 +43,15 @@ func runHub() {
 						c.isClosing = true
 						log.Println("write error:", err)
 
-						connection.WriteMessage(websocket.CloseMessage, []byte{})
-						connection.Close()
+						err := connection.WriteMessage(websocket.CloseMessage, []byte{})
+						if err != nil {
+							return
+						}
+
+						err = connection.Close()
+						if err != nil {
+							return
+						}
 						unregister <- connection
 					}
 				}(connection, c)
@@ -77,7 +84,10 @@ func main() {
 		// When the function returns, unregister the client and close the connection
 		defer func() {
 			unregister <- c
-			c.Close()
+			err := c.Close()
+			if err != nil {
+				return
+			}
 		}()
 
 		// Register the client
