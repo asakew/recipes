@@ -50,7 +50,7 @@ This project provides a starting point for building a web application with a cle
     go run cmd/main.go
     ```
 
-The API should now be running on `http://localhost:3000`.
+The API should now be running on `http://localhost:8080`.
 
 ## API Endpoints
 
@@ -64,23 +64,29 @@ The following endpoints are available in the API:
 ## Example Usage
 
 1. Add a new book:
-    ```bash
-    curl -X POST http://localhost:3000/books -d '{"title":"Book Title", "author":"Author Name"}' -H "Content-Type: application/json"
-    ```
+```bash
+curl -X POST http://localhost:8080/api/books \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald"
+  }'
+
+```
 
 2. List all books:
     ```bash
-    curl http://localhost:3000/books
+    curl http://localhost:8080/books
     ```
 
 3. Update a book:
     ```bash
-    curl -X PUT http://localhost:3000/books -d '{"id":"<book_id>", "title":"Updated Title", "author":"Updated Author"}' -H "Content-Type: application/json"
+    curl -X PUT http://localhost:8080/books -d '{"id":"<book_id>", "title":"Updated Title", "author":"Updated Author"}' -H "Content-Type: application/json"
     ```
 
 4. Remove a book:
     ```bash
-    curl -X DELETE http://localhost:3000/books -d '{"id":"<book_id>"}' -H "Content-Type: application/json"
+    curl -X DELETE http://localhost:8080/books -d '{"id":"<book_id>"}' -H "Content-Type: application/json"
     ```
 
 Replace `<book_id>` with the actual ID of the book.
@@ -192,7 +198,7 @@ func main() {
     app := fiber.New()
     bookService := book.NewService() // Assume NewService is a constructor for the book service
     routes.BookRouter(app, bookService)
-    app.Listen(":3000")
+    app.Listen(":8080")
 }
 ```
 
