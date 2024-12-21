@@ -5,9 +5,9 @@ import (
 	"net/mail"
 	"time"
 
-	"api-fiber-gorm/config"
-	"api-fiber-gorm/database"
-	"api-fiber-gorm/model"
+	"auth-jwt/config"
+	"auth-jwt/database"
+	"auth-jwt/model"
 
 	"gorm.io/gorm"
 

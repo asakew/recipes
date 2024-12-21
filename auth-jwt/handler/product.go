@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"api-fiber-gorm/database"
-	"api-fiber-gorm/model"
+	"auth-jwt/database"
+	"auth-jwt/model"
 
 	"github.com/gofiber/fiber/v2"
 )

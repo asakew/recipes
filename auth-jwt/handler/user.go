@@ -3,8 +3,8 @@ package handler
 import (
 	"strconv"
 
-	"api-fiber-gorm/database"
-	"api-fiber-gorm/model"
+	"auth-jwt/database"
+	"auth-jwt/model"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v5"
