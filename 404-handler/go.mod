@@ -1,4 +1,4 @@
-module main
+module 404-handler
 
 go 1.18
 
