@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"app/datasources/database"
-	"app/server/domain"
+	"clean-code/datasources/database"
+	"clean-code/server/domain"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

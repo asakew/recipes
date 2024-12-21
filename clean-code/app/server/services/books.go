@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"app/datasources/database"
-	"app/server/domain"
+	"clean-code/datasources/database"
+	"clean-code/server/domain"
 )
 
 // BooksService is an interface that defines the methods for the books service.

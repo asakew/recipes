@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"app/datasources"
+	"clean-code/datasources"
 
 	"github.com/stretchr/testify/assert"
 )

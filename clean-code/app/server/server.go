@@ -3,9 +3,9 @@ package server
 import (
 	"context"
 
-	"app/datasources"
-	"app/server/handlers"
-	"app/server/services"
+	"clean-code/datasources"
+	"clean-code/server/handlers"
+	"clean-code/server/services"
 
 	"github.com/gofiber/fiber/v2"
 )

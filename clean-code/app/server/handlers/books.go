@@ -3,8 +3,8 @@ package handlers
 import (
 	"log/slog"
 
-	"app/server/domain"
-	"app/server/services"
+	"clean-code/server/domain"
+	"clean-code/server/services"
 
 	"github.com/gofiber/fiber/v2"
 )

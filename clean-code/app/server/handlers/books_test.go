@@ -7,8 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"app/server/domain"
-	"app/server/services"
+	"clean-code/server/domain"
+	"clean-code/server/services"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/stretchr/testify/assert"

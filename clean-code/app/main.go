@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 
-	"app/datasources"
-	"app/datasources/database"
-	"app/server"
+	"clean-code/datasources"
+	"clean-code/datasources/database"
+	"clean-code/server"
 )
 
 func main() {
