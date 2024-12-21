@@ -3,21 +3,21 @@ package database
 import (
 	"log"
 
-	"gorm-postgres/models"
+	"go-postgres/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )
 
-type Dbinstance struct {
+type Distance struct {
 	Db *gorm.DB
 }
 
-var DB Dbinstance
+var DB Distance
 
 // connectDb
 func ConnectDb() {
-	dsn := "host=localhost user=postgres password='Root' dbname=books_db port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+	dsn := "host=37.77.104.186 user=gen_user password=o)\\;\\6!b,Tq^)= dbname=default_db port=5432 sslmode=disable TimeZone=Asia/Shanghai"
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Info),
@@ -31,7 +31,7 @@ func ConnectDb() {
 	log.Println("running migrations")
 	db.AutoMigrate(&models.Book{})
 
-	DB = Dbinstance{
+	DB = Distance{
 		Db: db,
 	}
 }

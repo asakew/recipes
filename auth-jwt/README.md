@@ -83,12 +83,12 @@ The following endpoints are available in the API:
 
 1. Register a new user:
     ```bash
-    curl -X POST http://localhost:3000/api/auth/register -d '{"username":"testuser", "password":"testpassword", "email":"test@example.com"}' -H "Content-Type: application/json"
+    curl -X POST http://localhost:3033/api/auth/register -d '{"username":"testuser", "password":"testpassword", "email":"test@example.com"}' -H "Content-Type: application/json"
     ```
 
 2. Login to get a JWT:
     ```bash
-    curl -X POST http://localhost:3000/api/auth/login -d '{"username":"testuser", "password":"testpassword"}' -H "Content-Type: application/json"
+    curl -X POST http://localhost:3003/api/auth/login -d '{"username":"testuser", "password":"testpassword"}' -H "Content-Type: application/json"
     ```
 
 3. Access a protected route:

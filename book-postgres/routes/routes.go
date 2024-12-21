@@ -2,8 +2,8 @@ package routes
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/zeimedee/go-postgres/database"
-	"github.com/zeimedee/go-postgres/models"
+	"go-postgres/database"
+	"go-postgres/models"
 )
 
 // Hello
@@ -25,7 +25,7 @@ func AddBook(c *fiber.Ctx) error {
 
 // AllBooks
 func AllBooks(c *fiber.Ctx) error {
-	books := []models.Book{}
+	var books []models.Book
 	database.DB.Db.Find(&books)
 
 	return c.Status(200).JSON(books)
@@ -33,7 +33,7 @@ func AllBooks(c *fiber.Ctx) error {
 
 // Book
 func Book(c *fiber.Ctx) error {
-	book := []models.Book{}
+	var book []models.Book
 	title := new(models.Book)
 	if err := c.BodyParser(title); err != nil {
 		return c.Status(400).JSON(err.Error())
@@ -44,7 +44,7 @@ func Book(c *fiber.Ctx) error {
 
 // Update
 func Update(c *fiber.Ctx) error {
-	book := []models.Book{}
+	var book []models.Book
 	title := new(models.Book)
 	if err := c.BodyParser(title); err != nil {
 		return c.Status(400).JSON(err.Error())
@@ -57,7 +57,7 @@ func Update(c *fiber.Ctx) error {
 
 // Delete
 func Delete(c *fiber.Ctx) error {
-	book := []models.Book{}
+	var book []models.Book
 	title := new(models.Book)
 	if err := c.BodyParser(title); err != nil {
 		return c.Status(400).JSON(err.Error())

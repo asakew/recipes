@@ -43,7 +43,7 @@ Here you can find the most **delicious** recipes to cook delicious meals using o
 - [GeoIP + MaxMind](./geoip-maxmind/README.md) - Geolocation with GeoIP and MaxMind databases.
 - [GORM](./gorm/README.md) - Using GORM with SQLite database.
 - [GORM MySQL](./gorm-mysql/README.md) - Using GORM with MySQL database.
-- [GORM + PostgreSQL](./gorm-postgres/README.md) - Using GORM with PostgreSQL database.
+- [GORM + PostgreSQL](book-postgres/README.md) - Using GORM with PostgreSQL database.
 - [Graceful shutdown](./graceful-shutdown/README.md) - Graceful shutdown of applications.
 - [GraphQL](./graphql/README.md) - Setting up a GraphQL server.
 - [gRPC](./grpc/README.md) - Using Fiber as a client to a gRPC server.
