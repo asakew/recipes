@@ -18,7 +18,10 @@ func NewApplication() *fiber.App {
 	app := fiber.New(fiber.Config{Views: engine})
 	app.Use(recover.New())
 	app.Use(logger.New())
-	app.Get("/dashboard", monitor.New())
+
+	app.Get("/monitoring", monitor.New()) // go to http://localhost:3000/dashboard
+
+	// Setup Router
 	router.InstallRouter(app)
 
 	return app

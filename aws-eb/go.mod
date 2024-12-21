@@ -1,4 +1,4 @@
-module main
+module aws-eb
 
 go 1.18
 
