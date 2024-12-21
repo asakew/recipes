@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"api-fiber-gorm/config"
-	"api-fiber-gorm/model"
+	"auth-jwt/config"
+	"auth-jwt/model"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

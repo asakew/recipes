@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"api-fiber-gorm/config"
+	"auth-jwt/config"
 
 	jwtware "github.com/gofiber/contrib/jwt"
 	"github.com/gofiber/fiber/v2"
