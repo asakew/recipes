@@ -1,9 +1,9 @@
 package routes
 
 import (
+	"book-postgres/database"
+	"book-postgres/models"
 	"github.com/gofiber/fiber/v2"
-	"go-postgres/database"
-	"go-postgres/models"
 )
 
 // Hello

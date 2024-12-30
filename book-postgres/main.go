@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
+	"book-postgres/database"
+	"book-postgres/routes"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
-	"go-postgres/database"
-	"go-postgres/routes"
 )
 
 func setUpRoutes(app *fiber.App) {

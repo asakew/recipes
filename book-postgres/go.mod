@@ -1,4 +1,4 @@
-module go-postgres
+module book-postgres
 
 go 1.23
 
