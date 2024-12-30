@@ -31,8 +31,8 @@ func AllBooks(c *fiber.Ctx) error {
 	return c.Status(200).JSON(books)
 }
 
-// Book
-func Book(c *fiber.Ctx) error {
+// GET Book
+func GetBook(c *fiber.Ctx) error {
 	var book []models.Book
 	title := new(models.Book)
 	if err := c.BodyParser(title); err != nil {

@@ -11,11 +11,11 @@ import (
 
 func setUpRoutes(app *fiber.App) {
 	app.Get("/hello", routes.Hello)
-	app.Get("/allbooks", routes.AllBooks)
-	app.Post("/addbook", routes.AddBook)
-	app.Post("/book", routes.Book)
-	app.Put("/update", routes.Update)
-	app.Delete("/delete", routes.Delete)
+	app.Get("/allBooks", routes.AllBooks) // all books
+	app.Post("/addBook", routes.AddBook)  // add book
+	app.Post("/book", routes.GetBook)     // get book
+	app.Put("/update", routes.Update)     // update
+	app.Delete("/delete", routes.Delete)  // delete
 }
 
 func main() {
