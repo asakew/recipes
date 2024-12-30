@@ -87,7 +87,7 @@ func RegisterRoutes(app *fiber.App) {
 		}
 		username := sessionUser["Name"].(string)
 
-		return c.Render("views/home", fiber.Map{
+		return c.Render("home", fiber.Map{
 			"username":  username,
 			"balance":   accounts[username],
 			"csrfToken": c.Locals("token"),
@@ -95,7 +95,7 @@ func RegisterRoutes(app *fiber.App) {
 	})
 
 	app.Get("/login", func(c *fiber.Ctx) error {
-		return c.Render("views/login", fiber.Map{})
+		return c.Render("login", nil)
 	})
 
 	app.Post("/login", func(c *fiber.Ctx) error {
