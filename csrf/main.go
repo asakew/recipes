@@ -4,20 +4,23 @@ package main
 import (
 	"embed"
 	"fmt"
+	"github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/gofiber/fiber/v2/middleware/recover"
 	"log"
 	"net/http"
 	"os"
 
+	"csrf/routes"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html/v2"
-	"main/routes"
 )
 
 //go:embed views/*
-var viewsfs embed.FS
+var viewsFS embed.FS
 
 func main() {
-	engine := html.NewFileSystem(http.FS(viewsfs), ".html")
+	engine := html.NewFileSystem(http.FS(viewsFS), ".html")
 
 	go func() {
 		// ### EVIL SERVER ###
@@ -44,6 +47,12 @@ func main() {
 			"Title": "Hello, World!",
 		})
 	})
+
+	// Middleware
+	app.Use(logger.New())
+	app.Use(recover.New())
+	app.Use(cors.New())
+
 	routes.RegisterRoutes(app)
 	fmt.Printf("Server started and listening at localhost:3000 - csrfActive: %v\n", len(os.Args) > 1 && os.Args[1] == "withoutCsrf")
 	// Start server
