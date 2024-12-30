@@ -6,12 +6,10 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-// Hello
 func Hello(c *fiber.Ctx) error {
 	return c.SendString("fiber")
 }
 
-// AddBook
 func AddBook(c *fiber.Ctx) error {
 	book := new(models.Book)
 	if err := c.BodyParser(book); err != nil {
@@ -23,7 +21,6 @@ func AddBook(c *fiber.Ctx) error {
 	return c.Status(200).JSON(book)
 }
 
-// AllBooks
 func AllBooks(c *fiber.Ctx) error {
 	var books []models.Book
 	database.DB.Db.Find(&books)
@@ -31,7 +28,6 @@ func AllBooks(c *fiber.Ctx) error {
 	return c.Status(200).JSON(books)
 }
 
-// GET Book
 func GetBook(c *fiber.Ctx) error {
 	var book []models.Book
 	title := new(models.Book)
@@ -42,7 +38,6 @@ func GetBook(c *fiber.Ctx) error {
 	return c.Status(200).JSON(book)
 }
 
-// Update
 func Update(c *fiber.Ctx) error {
 	var book []models.Book
 	title := new(models.Book)
@@ -55,7 +50,6 @@ func Update(c *fiber.Ctx) error {
 	return c.Status(200).JSON("updated")
 }
 
-// Delete
 func Delete(c *fiber.Ctx) error {
 	var book []models.Book
 	title := new(models.Book)
