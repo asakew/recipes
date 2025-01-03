@@ -22,6 +22,10 @@ This project provides a starting point for building a web application with user 
 
 ## Setup
 
+```bash
+go mod tidy
+```
+
 1. Clone the repository:
     ```bash
     git clone https://github.com/gofiber/recipes.git

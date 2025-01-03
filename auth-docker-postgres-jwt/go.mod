@@ -1,6 +1,6 @@
 module auth-docker-postgres-jwt
 
-go 1.20
+go 1.23.4
 
 require (
 	github.com/go-playground/validator/v10 v10.22.0
